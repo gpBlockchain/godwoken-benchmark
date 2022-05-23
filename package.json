@@ -1,0 +1,37 @@
+{
+  "name": "axon-benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "register": "node index_account.js"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ckb-lumos/base": "0.18.0-rc1",
+    "@ckb-lumos/common-scripts": "0.18.0-rc1",
+    "@metamask/eth-sig-util": "^4.0.1",
+    "ckb-js-toolkit": "^0.10.2",
+    "discord.js": "^13.6.0",
+    "keccak256": "^1.0.2",
+    "log4js": "^6.4.5",
+    "piscina": "^3.2.0",
+    "secp256k1": "^4.0.2",
+    "web3": "^1.6.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**": [
+      "prettier --config .prettierrc --write",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

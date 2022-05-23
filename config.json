@@ -1,0 +1,12 @@
+{
+    "http_endpoint": "http://localhost:8024",
+    "private_key" : "0xdd50cac37ec6dd12539a968c1a2cbedda75bd8724f7bcad486548eaabb87fc8b",
+    "keystore_path": "./keystore/account.private",
+    "continuous_benchmark": false,
+    "benchmark_time": 60000,
+    "batch_size": 1,
+    "thread_num": 50,
+    "id": "936501604767629344",
+    "token": "Fha8Hn6C31VEu3wL5XejIVGocTXiQbJ6HabAC5sLtHHwvqQ63iXj1FmOkH_FVN4mTZwQ",
+    "benchmark_cases": ["./contract_benchmark"]
+}
