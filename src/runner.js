@@ -11,7 +11,7 @@ class Runner {
     constructor(config) {
         this.config = config
         this.web3 = new Web3(new Web3.providers.HttpProvider(config.http_endpoint))
-        this.discord = new WebhookClient({ id: config.id, token: config.token })
+        // this.discord = new WebhookClient({ id: config.id, token: config.token })
 
         this.benchmark_info = {
             start_time: 0,
@@ -129,15 +129,15 @@ class Runner {
         return Math.max(this.benchmark_info.transfer_count, 1) / (this.benchmark_info.total_time / 1000)
     }
 
-    async send_discord() {
-        const embed = this.get_message_embed();
-        await this.discord.send({
-            content: ' ',
-            username: 'test-benchmark',
-            avatarURL: 'https://i.imgur.com/AfFp7pu.png',
-            embeds: [embed],
-        })
-    }
+    // async send_discord() {
+    //     const embed = this.get_message_embed();
+    //     await this.discord.send({
+    //         content: ' ',
+    //         username: 'test-benchmark',
+    //         avatarURL: 'https://i.imgur.com/AfFp7pu.png',
+    //         embeds: [embed],
+    //     })
+    // }
 
     get_message_embed() {
         return new MessageEmbed()
